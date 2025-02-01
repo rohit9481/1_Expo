@@ -1,120 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Insights - EcoEnergy</title>
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="css/dashboard.css">
-    <link rel="stylesheet" href="css/insights.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="stylesheet" href="css/styles.css" />
+    <link rel="stylesheet" href="css/dashboard.css" />
+    <link rel="stylesheet" href="css/insights.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
     <!-- Chart.js for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-</head>
-<body class="dashboard-body">
+  </head>
+  <body class="dashboard-body">
     <!-- Sidebar Navigation -->
     <nav class="sidebar">
-        <!-- Same sidebar as dashboard.html -->
+      <!-- Same sidebar as dashboard.html -->
     </nav>
 
     <main class="main-content">
-        <header class="dashboard-header">
-            <h1>Energy Insights</h1>
-            <div class="time-filter">
-                <button class="active" data-period="day">Day</button>
-                <button data-period="week">Week</button>
-                <button data-period="month">Month</button>
-                <button data-period="year">Year</button>
-            </div>
-        </header>
-
-        <div class="insights-grid">
-            <!-- Summary Cards -->
-            <div class="summary-cards">
-                <div class="summary-card">
-                    <div class="card-icon">
-                        <i class="fas fa-bolt"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>Total Usage</h3>
-                        <p class="value">245 kWh</p>
-                        <p class="trend positive">↓ 12% vs last month</p>
-                    </div>
-                </div>
-
-                <div class="summary-card">
-                    <div class="card-icon">
-                        <i class="fas fa-dollar-sign"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>Estimated Cost</h3>
-                        <p class="value">$52.30</p>
-                        <p class="trend positive">↓ 8% vs last month</p>
-                    </div>
-                </div>
-
-                <div class="summary-card">
-                    <div class="card-icon">
-                        <i class="fas fa-leaf"></i>
-                    </div>
-                    <div class="card-content">
-                        <h3>Carbon Footprint</h3>
-                        <p class="value">180 kg</p>
-                        <p class="trend positive">↓ 15% vs last month</p>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Main Chart -->
-            <div class="chart-container">
-                <h2>Energy Consumption Trends</h2>
-                <canvas id="mainChart"></canvas>
-            </div>
-
-            <!-- Usage Breakdown -->
-            <div class="usage-breakdown">
-                <h2>Usage by Device</h2>
-                <canvas id="deviceChart"></canvas>
-            </div>
-
-            <!-- AI Recommendations -->
-            <div class="recommendations">
-                <h2>Smart Recommendations</h2>
-                <div class="recommendation-cards">
-                    <div class="recommendation-card">
-                        <div class="rec-icon">
-                            <i class="fas fa-lightbulb"></i>
-                        </div>
-                        <div class="rec-content">
-                            <h3>Optimize AC Usage</h3>
-                            <p>Your AC runs at peak hours. Adjusting the temperature by 2°C could save 15% energy.</p>
-                            <button class="apply-btn">Apply Suggestion</button>
-                        </div>
-                    </div>
-
-                    <div class="recommendation-card">
-                        <div class="rec-icon">
-                            <i class="fas fa-clock"></i>
-                        </div>
-                        <div class="rec-content">
-                            <h3>Schedule Device Usage</h3>
-                            <p>Running your washing machine during off-peak hours could save $10/month.</p>
-                            <button class="apply-btn">Set Schedule</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Anomaly Detection -->
-            <div class="anomalies">
-                <h2>Detected Anomalies</h2>
-                <div class="anomaly-timeline">
-                    <!-- Anomaly items will be added here -->
-                </div>
-            </div>
+      <header class="dashboard-header">
+        <h1>Energy Insights</h1>
+        <div class="time-filter">
+          <button class="active" data-period="day">Day</button>
+          <button data-period="week">Week</button>
+          <button data-period="month">Month</button>
+          <button data-period="year">Year</button>
         </div>
+      </header>
+
+      <div class="insights-grid">
+        <!-- Summary Cards -->
+        <div class="summary-cards">
+          <div class="summary-card" id="totalUsageCard">
+            <div class="card-icon">
+              <i class="fas fa-bolt"></i>
+            </div>
+            <div class="card-content">
+              <h3>Total Usage</h3>
+              <p class="value" id="totalUsageValue">245 kWh</p>
+              <p class="trend positive">↓ 12% vs last month</p>
+            </div>
+          </div>
+
+          <div class="summary-card" id="estimatedCostCard">
+            <div class="card-icon">
+              <i class="fas fa-dollar-sign"></i>
+            </div>
+            <div class="card-content">
+              <h3>Estimated Cost</h3>
+              <p class="value" id="estimatedCostValue">$52.30</p>
+              <p class="trend positive">↓ 8% vs last month</p>
+            </div>
+          </div>
+
+          <div class="summary-card" id="carbonFootprintCard">
+            <div class="card-icon">
+              <i class="fas fa-leaf"></i>
+            </div>
+            <div class="card-content">
+              <h3>Carbon Footprint</h3>
+              <p class="value" id="carbonFootprintValue">180 kg</p>
+              <p class="trend positive">↓ 15% vs last month</p>
+            </div>
+          </div>
+        </div>
+
+        <!-- Main Chart -->
+        <div class="chart-container">
+          <h2>Energy Consumption Trends</h2>
+          <canvas id="mainChart"></canvas>
+        </div>
+
+        <!-- Usage Breakdown -->
+        <div class="usage-breakdown">
+          <h2>Usage by Device</h2>
+          <canvas id="deviceChart"></canvas>
+        </div>
+
+        <!-- AI Recommendations -->
+        <div class="recommendations">
+          <h2>Smart Recommendations</h2>
+          <div class="recommendation-cards">
+            <div class="recommendation-card">
+              <div class="rec-icon">
+                <i class="fas fa-lightbulb"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Optimize AC Usage</h3>
+                <p>Your AC runs at peak hours. Adjusting the temperature by 2°C could save 15% energy.</p>
+                <button class="apply-btn">Apply Suggestion</button>
+              </div>
+            </div>
+
+            <div class="recommendation-card">
+              <div class="rec-icon">
+                <i class="fas fa-clock"></i>
+              </div>
+              <div class="rec-content">
+                <h3>Schedule Device Usage</h3>
+                <p>Running your washing machine during off-peak hours could save $10/month.</p>
+                <button class="apply-btn">Set Schedule</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Anomaly Detection -->
+        <div class="anomalies">
+          <h2>Detected Anomalies</h2>
+          <div class="anomaly-timeline">
+            <!-- Anomaly items will be added here -->
+          </div>
+        </div>
+      </div>
     </main>
 
-    <script src="insights.js"></script>
-</body>
-</html> 
+    <script src="/FRONTEND/js/insights.js"></script>
+  </body>
+</html>
