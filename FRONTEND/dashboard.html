@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard - EcoEnergy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <div class="logo">
+            <i class="fas fa-leaf"></i>
+            <span>EcoEnergy</span>
+        </div>
+        <div class="nav-links">
+            <a href="dashboard.html" class="active">
+                <i class="fas fa-home"></i>
+                <span>Dashboard</span>
+            </a>
+            <a href="smart-plugs.html">
+                <i class="fas fa-plug"></i>
+                <span>Smart Plugs</span>
+            </a>
+            <a href="gamification.html">
+                <i class="fas fa-trophy"></i>
+                <span>Challenges</span>
+            </a>
+            <a href="insights.html">
+                <i class="fas fa-chart-bar"></i>
+                <span>Insights</span>
+            </a>
+            <a href="settings.html">
+                <i class="fas fa-cog"></i>
+                <span>Settings</span>
+            </a>
+        </div>
+    </nav>
+
+    <div class="main-content">
+        <div class="header">
+            <h1>Energy Dashboard</h1>
+        </div>
+
+        <div class="dashboard-grid">
+            <div class="card wide">
+                <h2>Real-Time Consumption</h2>
+                <div class="chart-container">
+                    <canvas id="liveChart"></canvas>
+                </div>
+            </div>
+
+            <div class="card">
+                <h2>Carbon Footprint</h2>
+                <canvas id="carbonChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Monthly Consumption</h2>
+                <canvas id="monthlyConsumptionChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Usage Distribution</h2>
+                <canvas id="usageChart"></canvas>
+            </div>
+
+            <div class="card">
+                <h2>Energy Consumption by Category</h2>
+                <canvas id="categoryChart"></canvas>
+            </div>
+        </div>
+    </div>
+    
+    <script src="js/dashboard.js"></script>
+</body>
+</html>

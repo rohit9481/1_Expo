@@ -1,0 +1,17 @@
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px; /* Space between cards */
+}
+
+.card {
+    background-color: #fff; /* Card background color */
+    border-radius: 8px; /* Rounded corners */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Shadow effect */
+    padding: 20px; /* Padding inside the card */
+}
+
+canvas {
+    max-width: 100%; /* Ensure the canvas does not exceed the card width */
+    height: 300px; /* Set a fixed height for the canvas */
+} 

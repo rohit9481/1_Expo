@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Settings - EcoEnergy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/settings.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <nav class="sidebar">
+        <!-- Same sidebar as dashboard.html -->
+    </nav>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Settings</h1>
+        </header>
+
+        <div class="settings-container">
+            <!-- Settings Navigation -->
+            <div class="settings-nav">
+                <button class="nav-item active" data-tab="profile">
+                    <i class="fas fa-user"></i>
+                    Profile
+                </button>
+                <button class="nav-item" data-tab="notifications">
+                    <i class="fas fa-bell"></i>
+                    Notifications
+                </button>
+                <button class="nav-item" data-tab="devices">
+                    <i class="fas fa-plug"></i>
+                    Devices
+                </button>
+                <button class="nav-item" data-tab="preferences">
+                    <i class="fas fa-sliders-h"></i>
+                    Preferences
+                </button>
+                <button class="nav-item" data-tab="billing">
+                    <i class="fas fa-credit-card"></i>
+                    Billing
+                </button>
+                <button class="nav-item" data-tab="security">
+                    <i class="fas fa-shield-alt"></i>
+                    Security
+                </button>
+            </div>
+
+            <!-- Settings Content -->
+            <div class="settings-content">
+                <!-- Profile Settings -->
+                <div class="settings-panel active" id="profile">
+                    <h2>Profile Settings</h2>
+                    <div class="profile-section">
+                        <div class="profile-header">
+                            <div class="profile-avatar">
+                                <img src="https://via.placeholder.com/100" alt="Profile">
+                                <button class="change-avatar">
+                                    <i class="fas fa-camera"></i>
+                                </button>
+                            </div>
+                            <div class="profile-info">
+                                <h3>John Doe</h3>
+                                <p>john.doe@example.com</p>
+                            </div>
+                        </div>
+                        <form class="settings-form">
+                            <div class="form-group">
+                                <label>Full Name</label>
+                                <input type="text" value="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label>Email</label>
+                                <input type="email" value="john.doe@example.com">
+                            </div>
+                            <div class="form-group">
+                                <label>Phone</label>
+                                <input type="tel" value="+1 234 567 890">
+                            </div>
+                            <div class="form-group">
+                                <label>Location</label>
+                                <input type="text" value="New York, USA">
+                            </div>
+                            <button type="submit" class="save-btn">Save Changes</button>
+                        </form>
+                    </div>
+                </div>
+
+                <!-- Notifications Settings -->
+                <div class="settings-panel" id="notifications">
+                    <h2>Notification Preferences</h2>
+                    <div class="notification-settings">
+                        <div class="notification-group">
+                            <h3>Email Notifications</h3>
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Usage Reports</h4>
+                                    <p>Weekly summary of your energy consumption</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Anomaly Alerts</h4>
+                                    <p>Unusual energy usage patterns</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="notification-group">
+                            <h3>Push Notifications</h3>
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Real-time Alerts</h4>
+                                    <p>Instant updates about your devices</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox">
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                            <div class="notification-option">
+                                <div>
+                                    <h4>Challenge Updates</h4>
+                                    <p>Progress and completion notifications</p>
+                                </div>
+                                <label class="switch">
+                                    <input type="checkbox" checked>
+                                    <span class="slider round"></span>
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Devices Settings -->
+                <div class="settings-panel" id="devices">
+                    <h2>Device Management</h2>
+                    <div class="device-settings">
+                        <!-- Device list and configuration options -->
+                    </div>
+                </div>
+
+                <!-- Preferences Settings -->
+                <div class="settings-panel" id="preferences">
+                    <h2>System Preferences</h2>
+                    <div class="preferences-settings">
+                        <!-- Theme, language, and other preferences -->
+                    </div>
+                </div>
+
+                <!-- Billing Settings -->
+                <div class="settings-panel" id="billing">
+                    <h2>Billing Information</h2>
+                    <div class="billing-settings">
+                        <!-- Payment methods and billing history -->
+                    </div>
+                </div>
+
+                <!-- Security Settings -->
+                <div class="settings-panel" id="security">
+                    <h2>Security Settings</h2>
+                    <div class="security-settings">
+                        <!-- Password change and 2FA options -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="js/settings.js"></script>
+</body>
+</html> 

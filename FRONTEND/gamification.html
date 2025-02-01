@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gamification - EcoEnergy</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="stylesheet" href="css/dashboard.css">
+    <link rel="stylesheet" href="css/gamification.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body class="dashboard-body">
+    <!-- Sidebar Navigation -->
+    <nav class="sidebar">
+        <!-- Same sidebar as dashboard.html -->
+    </nav>
+
+    <main class="main-content">
+        <header class="dashboard-header">
+            <h1>Challenges & Rewards</h1>
+            <div class="user-points">
+                <i class="fas fa-star"></i>
+                <span>2,450 Points</span>
+            </div>
+        </header>
+
+        <div class="gamification-grid">
+            <!-- Active Challenges Section -->
+            <section class="challenges-section">
+                <h2>Active Challenges</h2>
+                <div class="challenge-cards">
+                    <div class="challenge-card active">
+                        <div class="challenge-icon">
+                            <i class="fas fa-bolt"></i>
+                        </div>
+                        <div class="challenge-info">
+                            <h3>Peak Hours Hero</h3>
+                            <p>Reduce energy usage during peak hours (2PM - 6PM)</p>
+                            <div class="progress-container">
+                                <div class="progress-bar">
+                                    <div class="progress" style="width: 75%"></div>
+                                </div>
+                                <span>75%</span>
+                            </div>
+                            <div class="challenge-reward">
+                                <i class="fas fa-gift"></i>
+                                <span>Reward: 500 points</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- More challenge cards... -->
+                </div>
+            </section>
+
+            <!-- Leaderboard Section -->
+            <section class="leaderboard-section">
+                <h2>Leaderboard</h2>
+                <div class="leaderboard">
+                    <div class="leaderboard-item top">
+                        <span class="rank">1</span>
+                        <img src="https://via.placeholder.com/40" alt="User">
+                        <span class="name">John Doe</span>
+                        <span class="points">3,250</span>
+                    </div>
+                    <!-- More leaderboard items... -->
+                </div>
+            </section>
+
+            <!-- Achievements Section -->
+            <section class="achievements-section">
+                <h2>Your Achievements</h2>
+                <div class="achievements-grid">
+                    <div class="achievement-card">
+                        <div class="achievement-icon unlocked">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3>Energy Saver</h3>
+                        <p>Reduce energy usage by 20%</p>
+                    </div>
+                    <!-- More achievement cards... -->
+                </div>
+            </section>
+        </div>
+
+        <!-- Challenge Details Modal -->
+        <div id="challengeModal" class="modal">
+            <div class="modal-content">
+                <h2>Challenge Details</h2>
+                <div class="challenge-details">
+                    <!-- Challenge details content -->
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="gamification.js"></script>
+</body>
+</html> 
