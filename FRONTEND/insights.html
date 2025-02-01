@@ -6,8 +6,8 @@
     <title>Insights - EcoEnergy</title>
     <link rel="stylesheet" href="css/styles.css" />
     <link rel="stylesheet" href="css/dashboard.css" />
-    <link rel="stylesheet" href="css/insights.css" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="css/insights.css" />
     <!-- Chart.js for visualizations -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
   </head>
@@ -69,12 +69,16 @@
         <div class="chart-container">
           <h2>Energy Consumption Trends</h2>
           <canvas id="mainChart"></canvas>
+          <!-- Generate Report Button -->
+          <button class="generate-report-btn">Generate Report</button>
         </div>
 
         <!-- Usage Breakdown -->
         <div class="usage-breakdown">
           <h2>Usage by Device</h2>
           <canvas id="deviceChart"></canvas>
+          <!-- Generate Report Button -->
+          <button class="generate-report-btn">Generate Report</button>
         </div>
 
         <!-- AI Recommendations -->

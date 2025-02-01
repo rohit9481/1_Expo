@@ -1,3 +1,4 @@
+/* General Layout */
 .insights-grid {
     display: grid;
     gap: 2rem;
@@ -16,12 +17,22 @@
     color: var(--primary-color);
     border-radius: 20px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .time-filter button.active {
     background: var(--primary-color);
     color: white;
+    border-color: var(--primary-color);
+}
+
+.time-filter button:hover {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    transform: scale(1.05);
 }
 
 /* Summary Cards */
@@ -133,11 +144,19 @@
     border: none;
     border-radius: 5px;
     cursor: pointer;
-    transition: var(--transition);
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    text-transform: uppercase;
+    font-size: 0.9rem;
 }
 
 .apply-btn:hover {
     background: #27ae60;
+    transform: scale(1.05);
+}
+
+.apply-btn:active {
+    transform: scale(0.98);
 }
 
 /* Anomaly Timeline */
@@ -147,6 +166,68 @@
     padding: 1.5rem;
     box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
+
+.anomaly-timeline button {
+    padding: 0.5rem 1rem;
+    border: 1px solid var(--primary-color);
+    background: none;
+    color: var(--primary-color);
+    border-radius: 20px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease;
+    font-weight: 600;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+}
+
+.anomaly-timeline button:hover {
+    background: rgba(var(--primary-color-rgb), 0.1);
+    color: var(--primary-color);
+    transform: scale(1.05);
+}
+
+/* Apply Button in Recommendations */
+.recommendation-card .apply-btn {
+    background: var(--secondary-color);
+    border-radius: 5px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.recommendation-card .apply-btn:hover {
+    background: #27ae60;
+    transform: scale(1.05);
+}
+
+/* Generate report button */
+.generate-report-btn {
+    background-color: #2ecc71;  /* Primary button color */
+    color: white;               /* Text color */
+    padding: 12px 24px;         /* Adjusting padding for better button sizing */
+    border: none;               /* Removing border */
+    border-radius: 5px;         /* Rounded corners */
+    font-size: 16px;            /* Font size */
+    font-weight: bold;          /* Bold text */
+    cursor: pointer;           /* Pointer on hover */
+    transition: all 0.3s ease;  /* Smooth transition effect */
+    text-align: center;         /* Center text inside button */
+}
+  
+.generate-report-btn:hover {
+    background-color: #ffffff;  /* White on hover */
+    color: #2ecc71; 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Add shadow on hover */
+}
+
+.generate-report-btn:focus {
+    outline: none;              /* Remove default focus outline */
+    box-shadow: 0 0 5px 2px rgba(0, 123, 255, 0.5); /* Focus effect */
+}
+
+.generate-report-btn:active {
+    background-color: #2ecc71;  /* Darkest blue when clicked */
+    transform: scale(0.98);     /* Slightly shrink button when clicked */
+}  
 
 @media (max-width: 768px) {
     .summary-cards {
@@ -161,4 +242,4 @@
     .rec-icon {
         margin: 0 auto;
     }
-} 
+}
